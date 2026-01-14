@@ -1,5 +1,6 @@
 {
-    "name": "app",
+    "name": "porsche-premium-experience",
+    "description": "A premium digital experience showcasing luxury Porsche vehicles, built with Next.js 15 and Framer Motion.",
     "version": "0.1.0",
     "private": true,
     "scripts": {
