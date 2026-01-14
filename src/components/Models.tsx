@@ -5,10 +5,18 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const models = [
+  {
+    id: "718",
+    name: "718 Cayman GT4",
+    tagline: "Pure Performance.",
+    image: "https://a.storyblok.com/f/322327/1700x1300/f9eb1e8a08/cm24n3cox0009-718-cayman-chassis.jpg/m/1700x1155/smart/filters:format(avif)",
+    price: "From $106,500",
+  },
   {
     id: "911",
     name: "911 Carrera GTS",
@@ -23,20 +31,13 @@ const models = [
     image: "https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?auto=format&fit=crop&q=80&w=1000",
     price: "From $209,000",
   },
-    {
-      id: "718",
-      name: "718 Cayman GT4",
-      tagline: "Pure Performance.",
-      image: "https://www.marshallgoldmanbh.com/imagetag/4742/3/l/Used-2023-Porsche-718-Cayman-GT4-RS-Very-Low-Miles-Weissach-Package-Leather-and-Race-Tex-interior-1757341062.jpg",
-      price: "From $106,500",
-    },
-    {
-      id: "cayenne",
-      name: "Cayenne Turbo E-Hybrid",
-      tagline: "Versatile Power.",
-      image: "https://images.drivespark.com/img/2023/08/porsche-canyenne-turbo-e-hybrid-action-shot-1693289347.jpg",
-      price: "From $157,000",
-    },
+  {
+    id: "cayenne",
+    name: "Cayenne Turbo E-Hybrid",
+    tagline: "Versatile Power.",
+    image: "https://images.drivespark.com/img/2023/08/porsche-canyenne-turbo-e-hybrid-action-shot-1693289347.jpg",
+    price: "From $157,000",
+  },
 ];
 
 export const Models = () => {
@@ -45,14 +46,14 @@ export const Models = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      const pin = gsap.fromTo(
-        sectionRef.current,
-        { x: 0 },
-        {
-          x: "-300vw",
-          ease: "none",
-          duration: 1,
-          scrollTrigger: {
+        const pin = gsap.fromTo(
+          sectionRef.current,
+          { x: 0 },
+          {
+            x: "-400vw",
+            ease: "none",
+            duration: 1,
+            scrollTrigger: {
             trigger: triggerRef.current,
             start: "top top",
             end: "2000 top",
@@ -70,9 +71,9 @@ export const Models = () => {
 
   return (
     <div id="models" className="overflow-hidden">
-      <div ref={triggerRef}>
-        <div ref={sectionRef} className="flex flex-row relative h-screen w-[400vw]">
-          {/* Header Slide */}
+        <div ref={triggerRef}>
+          <div ref={sectionRef} className="flex flex-row relative h-screen w-[500vw]">
+            {/* Header Slide */}
           <div className="h-screen w-screen flex flex-col justify-center px-20">
             <h2 className="text-8xl md:text-[12rem] font-heading font-bold tracking-tighter uppercase leading-none">
               The <span className="text-porsche-red">Lineup</span>
@@ -90,6 +91,8 @@ export const Models = () => {
                   src={model.image}
                   alt={model.name}
                   fill
+                  unoptimized
+                  priority
                   className="object-cover transition-transform duration-700 group-hover:scale-105 brightness-75"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
@@ -101,15 +104,15 @@ export const Models = () => {
                   <h3 className="text-6xl md:text-8xl font-heading font-bold uppercase mb-4">
                     {model.name}
                   </h3>
-                  <div className="flex items-center space-x-8">
-                    <span className="text-xl font-light text-zinc-300 tracking-widest uppercase">
-                      {model.price}
-                    </span>
-                    <button className="flex items-center space-x-3 text-sm font-bold uppercase tracking-widest hover:text-porsche-red transition-colors group">
-                      <span>Configure</span>
-                      <ArrowRight size={18} className="transition-transform group-hover:translate-x-2" />
-                    </button>
-                  </div>
+                    <div className="flex items-center space-x-8">
+                      <span className="text-xl font-light text-zinc-300 tracking-widest uppercase">
+                        {model.price}
+                      </span>
+                      <Link href="/models" className="flex items-center space-x-3 text-sm font-bold uppercase tracking-widest hover:text-porsche-red transition-colors group">
+                        <span>Configure</span>
+                        <ArrowRight size={18} className="transition-transform group-hover:translate-x-2" />
+                      </Link>
+                    </div>
                 </div>
               </div>
             </div>

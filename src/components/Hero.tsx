@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,17 +96,17 @@ export const Hero = () => {
             Experience the new 911 Carrera GTS. The first road-legal 911 with a lightweight, performance-focused hybrid powertrain.
           </p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <button className="group relative px-8 py-4 bg-porsche-red text-white overflow-hidden transition-all duration-300 hover:pr-12">
-              <span className="relative z-10 font-bold uppercase tracking-widest text-sm">
-                Explore Models
-              </span>
-              <ArrowRight className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300" size={18} />
-            </button>
-            <button className="px-8 py-4 border border-white/20 hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-bold">
-              Book a Test Drive
-            </button>
-          </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link href="/models" className="group relative px-8 py-4 bg-porsche-red text-white overflow-hidden transition-all duration-300 hover:pr-12">
+                <span className="relative z-10 font-bold uppercase tracking-widest text-sm">
+                  Explore Models
+                </span>
+                <ArrowRight className="absolute right-4 top-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300" size={18} />
+              </Link>
+              <Link href="/#booking" className="px-8 py-4 border border-white/20 hover:bg-white hover:text-black transition-all duration-300 uppercase tracking-widest text-sm font-bold">
+                Book a Test Drive
+              </Link>
+            </div>
         </div>
       </div>
 

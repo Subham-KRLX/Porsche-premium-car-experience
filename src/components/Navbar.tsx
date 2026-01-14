@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Search, User } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,11 +17,12 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: "Models", href: "#models" },
-    { name: "Experience", href: "#experience" },
-    { name: "Shop", href: "#shop" },
-    { name: "Service", href: "#service" },
+    const navLinks = [
+    { name: "Models", href: "/models" },
+    { name: "Experience", href: "/experience" },
+    { name: "Shop", href: "/shop" },
+    { name: "Service", href: "/service" },
+    { name: "Account", href: "/dashboard" },
   ];
 
   return (
@@ -51,12 +52,6 @@ export const Navbar = () => {
         </div>
 
         <div className="flex items-center space-x-6">
-          <button className="hover:text-porsche-red transition-colors">
-            <Search size={20} />
-          </button>
-          <button className="hover:text-porsche-red transition-colors">
-            <User size={20} />
-          </button>
           <button
             className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}

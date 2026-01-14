@@ -7,6 +7,13 @@ import Link from "next/link";
 
 const models = [
   {
+    id: "718",
+    name: "718 Cayman GT4",
+    subtitle: "Pure Performance.",
+    image: "https://a.storyblok.com/f/322327/1700x1300/f9eb1e8a08/cm24n3cox0009-718-cayman-chassis.jpg/m/1700x1155/smart/filters:format(avif)",
+    price: "From $106,500",
+  },
+  {
     id: "911",
     name: "911",
     subtitle: "Timeless Machine",
@@ -21,18 +28,11 @@ const models = [
     price: "From $90,900",
   },
   {
-    id: "panamera",
-    name: "Panamera",
-    subtitle: "Thrilling contradictions",
-    image: "https://images.unsplash.com/photo-1580273916550-e323be2ae537?q=80&w=1964&auto=format&fit=crop",
-    price: "From $92,400",
-  },
-  {
     id: "cayenne",
-    name: "Cayenne",
-    subtitle: "Sportscar for five",
-    image: "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=2070&auto=format&fit=crop",
-    price: "From $79,200",
+    name: "Cayenne Turbo E-Hybrid",
+    subtitle: "Versatile Power.",
+    image: "https://images.drivespark.com/img/2023/08/porsche-canyenne-turbo-e-hybrid-action-shot-1693289347.jpg",
+    price: "From $157,000",
   },
 ];
 

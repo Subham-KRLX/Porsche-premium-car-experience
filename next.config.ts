@@ -4,8 +4,49 @@ import path from "node:path";
 const nextConfig: NextConfig = {
   /* config options here */
   images: {
-    domains: ["images.unsplash.com", "files.porsche.com", "www.marshallgoldmanbh.com", "images.drivespark.com"],
-  },
+      remotePatterns: [
+        {
+          protocol: "https",
+          hostname: "images.unsplash.com",
+        },
+        {
+          protocol: "https",
+          hostname: "files.porsche.com",
+        },
+        {
+          protocol: "https",
+          hostname: "www.marshallgoldmanbh.com",
+        },
+        {
+          protocol: "https",
+          hostname: "images.drivespark.com",
+        },
+        {
+          protocol: "https",
+          hostname: "a.storyblok.com",
+        },
+        {
+          protocol: "https",
+          hostname: "content-hub.imgix.net",
+        },
+          {
+            protocol: "https",
+            hostname: "images.ctfassets.net",
+          },
+          {
+            protocol: "https",
+            hostname: "img.shopstyle-cdn.com",
+          },
+            {
+              protocol: "https",
+              hostname: "opinari-drivers.com",
+            },
+            {
+              protocol: "https",
+              hostname: "shop.porsche.com",
+            },
+          ],
+    },
   turbopack: {
     rules: {
       "*.{jsx,tsx}": {
@@ -18,3 +59,4 @@ const nextConfig: NextConfig = {
 };
 
 export default nextConfig;
+// Orchids restart: 1768413746357
