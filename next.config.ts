@@ -46,16 +46,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  turbopack: {
-    rules: {
-      "*.{jsx,tsx}": {
-        loaders: [
-          path.resolve(__dirname, "src/visual-edits/component-tagger-loader.js"),
-        ],
-      },
-    },
-  },
 };
 
 export default nextConfig;
-// Orchids restart: 1768414446357

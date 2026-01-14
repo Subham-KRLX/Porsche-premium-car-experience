@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, Tool, Settings, Calendar, ShieldCheck } from "lucide-react";
+import { ArrowLeft, Settings, Calendar, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 
 export default function ServicePage() {
