@@ -1,49 +1,56 @@
 # Porsche Premium Car Experience
 
-Experience the ultimate in luxury and performance with our latest Porsche models. This project is a premium car showcase application built with modern web technologies, offering a sleek, immersive, and high-performance user experience.
+A premium digital experience showcasing luxury Porsche vehicles, built with modern web technologies to deliver a sleek, immersive, and high-performance user journey. This project captures the essence of the Porsche brand through fluid animations, interactive 3D elements, and a sophisticated design system.
 
-![Home Page Placeholder](./screenshots/home.png)
-*Replace this image with a screenshot of the Home Page*
+## 📸 Project Showcase
 
-## Features
+### **The Pure Porsche Experience**
+Experience the brand in its purest form with a cinematic landing page featuring immersive video backgrounds and dynamic typography.
+![Home Page](public/screenshots/home-hero.png)
 
-*   **Immersive Hero Section**: Full-screen video backgrounds and dynamic typography to capture attention.
-*   **Model Showcase**: Interactive 3D or high-fidelity image carousels allowing users to explore different Porsche models.
-*   **Detailed Service Pages**: Information on maintenance, genuine parts, and warranty services.
-*   **Responsive Design**: Fully optimized for desktops, tablets, and mobile devices.
-*   **Smooth Animations**: Powered by Framer Motion and GSAP for a premium feel.
-*   **Dark Mode Aesthetic**: A sleek, sophisticated UI designed to match the Porsche brand identity.
+### **Beyond The Driver’s Seat**
+Explore the philosophy behind the engineering.
+![Models Showcase](public/screenshots/model-detail.png)
 
-## Screenshots
+### **Lifestyle Collection**
+A dedicated shop section showcasing the premium lifestyle accessories that accompany the drive.
+![Lifestyle Shop](public/screenshots/lifestyle-collection.png)
 
-### Model Explorer
-![Models Page Placeholder](./screenshots/models.png)
-*Explore our range of premium vehicles.*
+### **75 Years of Dreams**
+Celebrating the heritage and the future of the 911 Carrera GTS.
+![Heritage Section](public/screenshots/911-carrera.png)
 
-### Service & Maintenance
-![Service Page Placeholder](./screenshots/service.png)
-*Book appointments and view service details.*
+---
 
-## Tech Stack
+## 🛠 Tech Stack
 
-This project leverages the latest tools in the Next.js ecosystem:
+This project is built using the bleeding edge of the Next.js ecosystem:
 
-*   **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
-*   **Styling**: [Tailwind CSS](https://tailwindcss.com/) with `tailwindcss-animate`
-*   **UI Components**: [Radix UI](https://www.radix-ui.com/) & [Headless UI](https://headlessui.com/)
-*   **Icons**: [Lucide React](https://lucide.dev/)
-*   **Animations**: [Framer Motion](https://www.framer.com/motion/) & [GSAP](https://gsap.com/)
-*   **Database**: Supabase (PostgreSQL)
-*   **Deployment**: Vercel
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations**:
+  - [Framer Motion](https://www.framer.com/motion/) (UI Interactions)
+  - [GSAP](https://gsap.com/) (Complex Sequences)
+- **3D & Canvas**: [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) & [Drei](https://github.com/pmndrs/drei)
+- **Database & ORM**:
+  - [LibSQL](https://turso.tech/libsql) (via Turso or local)
+  - [Drizzle ORM](https://orm.drizzle.team/)
+- **Authentication**: [Better Auth](https://www.better-auth.com/)
+- **UI Components**:
+  - [Radix UI](https://www.radix-ui.com/) (Primitives)
+  - [Lucide React](https://lucide.dev/) (Icons)
+  - [Swiper](https://swiperjs.com/) / [Embla Carousel](https://www.embla-carousel.com/)
 
-## Getting Started
+---
+
+## 🚀 Getting Started
 
 Follow these steps to run the project locally.
 
 ### Prerequisites
 
-*   Node.js (v18 or higher)
-*   npm
+- Node.js (v18+)
+- npm
 
 ### Installation
 
@@ -56,17 +63,19 @@ Follow these steps to run the project locally.
 2.  **Install dependencies:**
     ```bash
     npm install
-    # Note: If you see peer dependency warnings, you can use --legacy-peer-deps
+    # or
     npm install --legacy-peer-deps
     ```
 
 3.  **Set up Environment Variables:**
-    Create a `.env` file in the root directory and add your Supabase credentials:
+    Create a `.env` file in the root directory. You will need to configure your database and authentication keys (e.g., Turso/LibSQL credentials, Better Auth secret).
+    
+    Example `.env`:
     ```env
-    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-    SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
-    DATABASE_URL=your_database_url
+    DATABASE_URL="libsql://your-db-url.turso.io"
+    DATABASE_AUTH_TOKEN="your-auth-token"
+    BETTER_AUTH_SECRET="your-secret-key"
+    NEXT_PUBLIC_APP_URL="http://localhost:3000"
     ```
 
 4.  **Run the development server:**
@@ -77,15 +86,21 @@ Follow these steps to run the project locally.
 5.  **Open the app:**
     Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Deployment
+## 📦 Build & Deployment
 
-This application is ready to be deployed on **Vercel**.
+To build the application for production:
 
-1.  Push your code to a GitHub repository.
-2.  Import the project into Vercel.
-3.  Add the environment variables from your `.env` file to the Vercel project settings.
-4.  Deploy!
+```bash
+npm run build
+```
 
-## License
+This application is optimized for deployment on **Vercel**.
+
+1.  Push your code to GitHub.
+2.  Import the project in Vercel.
+3.  Add the necessary Environment Variables.
+4.  Deploy.
+
+## 📄 License
 
 This project is licensed under the MIT License.
