@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 import path from "node:path";
 const nextConfig: NextConfig = {
+  
   images: {
     remotePatterns: [
       {
@@ -27,6 +28,7 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "content-hub.imgix.net",
       },
+      
       {
         protocol: "https",
         hostname: "images.ctfassets.net",
