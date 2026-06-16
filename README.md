@@ -1,7 +1,6 @@
 # Porsche Premium Car Experience
 
 A premium digital experience showcasing luxury Porsche vehicles, built with modern web technologies to deliver a sleek, immersive, and high-performance user journey. This project captures the essence of the Porsche brand through fluid animations, interactive 3D elements, and a sophisticated design system.
-
 ## 📸 Project Showcase
 
 ### **The Pure Porsche Experience**
