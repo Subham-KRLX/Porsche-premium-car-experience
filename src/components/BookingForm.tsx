@@ -6,7 +6,6 @@ import { Send, CheckCircle2 } from "lucide-react";
 
 export const BookingForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
