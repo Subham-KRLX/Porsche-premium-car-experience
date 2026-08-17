@@ -8,7 +8,6 @@ import Image from "next/image";
 import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
-
 export const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
