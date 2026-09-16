@@ -70,10 +70,11 @@ export const Hero = () => {
     >
       <div ref={bgRef} className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=2070"
-          alt="Porsche Heritage"
+          src="/porsche-911-gts-hero.webp"
+          alt="Porsche 911 Carrera GTS parked on a village road"
           fill
-          className="object-cover brightness-50"
+          sizes="100vw"
+          className="object-cover object-center brightness-[0.6]"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black" />
