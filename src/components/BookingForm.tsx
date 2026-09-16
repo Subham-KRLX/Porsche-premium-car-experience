@@ -13,14 +13,14 @@ export const BookingForm = () => {
   };
 
   return (
-    <section id="booking" className="py-32 px-6 bg-zinc-950">
+    <section id="booking" className="booking-section py-24 md:py-32 px-6">
       <div className="container mx-auto max-w-6xl">
         <div className="grid md:grid-cols-2 gap-20 items-center">
           <div id="experience">
             <span className="text-porsche-red uppercase tracking-[0.3em] font-bold text-sm mb-6 block">
               Experience
             </span>
-            <h2 className="text-5xl md:text-7xl font-heading font-bold uppercase mb-8 leading-tight">
+            <h2 className="text-4xl md:text-6xl font-heading font-medium mb-8 leading-tight">
               The Art of <br />
               <span className="italic">Performance.</span>
             </h2>
