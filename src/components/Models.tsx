@@ -14,7 +14,7 @@ const models = [
     id: "718",
     name: "718 Cayman GT4",
     tagline: "Pure Performance.",
-    image: "https://a.storyblok.com/f/322327/1700x1300/f9eb1e8a08/cm24n3cox0009-718-cayman-chassis.jpg/m/1700x1155/smart/filters:format(avif)",
+    image: "/porsche-718-cayman-gt4.webp",
     price: "From $106,500",
   },
   {
@@ -91,9 +91,9 @@ export const Models = () => {
                   src={model.image}
                   alt={model.name}
                   fill
-                  unoptimized
                   priority
-                  className="object-cover transition-transform duration-700 group-hover:scale-105 brightness-75"
+                  sizes="100vw"
+                  className="object-cover object-center transition-transform duration-700 group-hover:scale-105 brightness-75"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
                 
