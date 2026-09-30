@@ -46,7 +46,7 @@ Follow these steps to run the project locally.
 
 ### Prerequisites
 
-- Node.js (v18+)
+- Node.js 18.18 or newer
 - npm
 
 ### Installation
