@@ -21,7 +21,7 @@ Celebrating the heritage and the future of the 911 Carrera GTS.
 
 ## 🛠 Tech Stack
 
-This project is built using the bleeding edge of the Next.js ecosystem:
+This project uses a modern Next.js stack:
 
 - **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
 - **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
