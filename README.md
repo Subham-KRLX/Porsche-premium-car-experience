@@ -85,6 +85,13 @@ Follow these steps to run the project locally.
 
 ## 📦 Build & Deployment
 
+Run the code checks before building:
+
+```bash
+npm run lint
+npm run typecheck
+```
+
 To build the application for production:
 
 ```bash

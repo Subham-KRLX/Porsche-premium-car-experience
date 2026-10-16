@@ -3,6 +3,7 @@ const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
 })
 const eslintConfig = [
+  { ignores: ['.next/**', 'out/**', 'next-env.d.ts'] },
   ...compat.config({
     extends: ['next'],
     plugins: ['import'],
