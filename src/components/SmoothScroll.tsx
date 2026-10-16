@@ -5,26 +5,33 @@ import Lenis from "lenis";
 
 export const SmoothScroll = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothWheel: true,
-      wheelMultiplier: 1,
-      touchMultiplier: 2,
-      infinite: false,
-    });
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let lenis: Lenis | undefined;
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    const syncMotionPreference = () => {
+      lenis?.destroy();
+      lenis = undefined;
+      if (reducedMotion.matches) return;
 
-    requestAnimationFrame(raf);
+      lenis = new Lenis({
+        autoRaf: true,
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        orientation: "vertical",
+        gestureOrientation: "vertical",
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        touchMultiplier: 2,
+        infinite: false,
+      });
+    };
+
+    syncMotionPreference();
+    reducedMotion.addEventListener("change", syncMotionPreference);
 
     return () => {
-      lenis.destroy();
+      reducedMotion.removeEventListener("change", syncMotionPreference);
+      lenis?.destroy();
     };
   }, []);
 
