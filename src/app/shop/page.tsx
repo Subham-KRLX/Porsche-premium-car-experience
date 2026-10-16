@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, ShoppingBag, ArrowRight } from "lucide-react";
+import { ArrowLeft, ShoppingBag } from "lucide-react";
 import Image from "next/image";
 
 export default function ShopPage() {

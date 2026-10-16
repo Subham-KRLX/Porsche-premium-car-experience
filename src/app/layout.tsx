@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import ErrorReporter from "@/components/ErrorReporter";
-import Script from "next/script";
 import { Navbar } from "@/components/Navbar";
 import { SmoothScroll } from "@/components/SmoothScroll";
 

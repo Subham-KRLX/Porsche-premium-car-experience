@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft, Play, MapPin, Calendar } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 
 export default function ExperiencePage() {

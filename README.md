@@ -1,11 +1,11 @@
 # Porsche Premium Car Experience
-A premium digital experience showcasing luxury Porsche vehicles, built with modern web technologies to deliver a sleek, immersive, and high-performance user journey. This project captures the essence of the Porsche brand through fluid animations, interactive 3D elements, and a sophisticated design system.
+A premium digital experience showcasing luxury Porsche vehicles, built with modern web technologies to deliver a sleek, immersive, and high-performance user journey. This project captures the essence of the Porsche brand through fluid animations, model galleries, and a sophisticated design system.
 
 This is an independent portfolio project, not an official Porsche service. The test-drive form is a client-side demonstration: it validates sample details but does not transmit or store them, contact a dealer, or create a booking.
 
 ## 📸 Project Showcase
 ### **The Pure Porsche Experience**
-Experience the brand in its purest form with a cinematic landing page featuring immersive video backgrounds and dynamic typography.
+Experience the brand in its purest form with a cinematic landing page featuring car photography and dynamic typography.
 ![Home Page](public/screenshots/home-hero.png)
 ### **Beyond The Driver’s Seat**
 Explore the philosophy behind the engineering.
@@ -30,15 +30,10 @@ This project uses a modern Next.js stack:
 - **Animations**:
   - [Framer Motion](https://www.framer.com/motion/) (UI Interactions)
   - [GSAP](https://gsap.com/) (Complex Sequences)
-- **3D & Canvas**: [React Three Fiber](https://docs.pmnd.rs/react-three-fiber) & [Drei](https://github.com/pmndrs/drei)
-- **Database & ORM**:
-  - [LibSQL](https://turso.tech/libsql) (via Turso or local)
-  - [Drizzle ORM](https://orm.drizzle.team/)
-- **Authentication**: [Better Auth](https://www.better-auth.com/)
-- **UI Components**:
-  - [Radix UI](https://www.radix-ui.com/) (Primitives)
-  - [Lucide React](https://lucide.dev/) (Icons)
-  - [Swiper](https://swiperjs.com/) / [Embla Carousel](https://www.embla-carousel.com/)
+- **Smooth Scrolling**: [Lenis](https://github.com/darkroomengineering/lenis)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+The current application has no database, authentication, payment integration, or live booking backend. Account and shop content are demonstrations.
 
 ---
 
@@ -61,28 +56,17 @@ Follow these steps to run the project locally.
 
 2.  **Install dependencies:**
     ```bash
-    npm install
-    # or
-    npm install --legacy-peer-deps
+    npm ci
     ```
 
-3.  **Set up Environment Variables:**
-    Create a `.env` file in the root directory. You will need to configure your database and authentication keys (e.g., Turso/LibSQL credentials, Better Auth secret).
-    
-    Example `.env`:
-    ```env
-    DATABASE_URL="libsql://your-db-url.turso.io"
-    DATABASE_AUTH_TOKEN="your-auth-token"
-    BETTER_AUTH_SECRET="your-secret-key"
-    NEXT_PUBLIC_APP_URL="http://localhost:3000"
-    ```
+    No environment variables or external service credentials are required by the current application.
 
-4.  **Run the development server:**
+3.  **Run the development server:**
     ```bash
     npm run dev
     ```
 
-5.  **Open the app:**
+4.  **Open the app:**
     Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## 📦 Build & Deployment
@@ -92,6 +76,7 @@ Run the code checks before building:
 ```bash
 npm run lint
 npm run typecheck
+npm test
 ```
 
 To build the application for production:
@@ -104,8 +89,7 @@ This application is optimized for deployment on **Vercel**.
 
 1.  Push your code to GitHub.
 2.  Import the project in Vercel.
-3.  Add the necessary Environment Variables.
-4.  Deploy.
+3.  Deploy with the default Next.js build settings.
 
 ## 📄 License
 

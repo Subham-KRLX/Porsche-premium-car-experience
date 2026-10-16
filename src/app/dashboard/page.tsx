@@ -11,9 +11,7 @@ import {
   ChevronRight,
   Shield,
   Bell,
-  CreditCard,
-  MapPin,
-  Clock
+  MapPin
 } from "lucide-react";
 
 export default function DashboardPage() {
