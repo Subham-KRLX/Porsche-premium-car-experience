@@ -3,7 +3,7 @@ A premium digital experience showcasing luxury Porsche vehicles, built with mode
 
 This is an independent portfolio project, not an official Porsche service. The test-drive form is a client-side demonstration: it validates sample details but does not transmit or store them, contact a dealer, or create a booking.
 
-## 📸 Project Showcase
+## Project Showcase
 ### **The Pure Porsche Experience**
 Experience the brand in its purest form with a cinematic landing page featuring car photography and dynamic typography.
 ![Home Page](public/screenshots/home-hero.png)
@@ -21,7 +21,7 @@ Celebrating the heritage and the future of the 911 Carrera GTS.
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 This project uses a modern Next.js stack:
 
@@ -37,7 +37,7 @@ The current application has no database, authentication, payment integration, or
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these steps to run the project locally.
 
@@ -69,7 +69,7 @@ Follow these steps to run the project locally.
 4.  **Open the app:**
     Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-## 📦 Build & Deployment
+## Build & Deployment
 
 Run the code checks before building:
 
