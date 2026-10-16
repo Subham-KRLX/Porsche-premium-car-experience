@@ -47,12 +47,12 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5 gap-6">
-            <div className="flex space-x-8 text-[10px] uppercase tracking-[0.2em] text-zinc-600 font-bold">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Cookie Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Imprint</a>
+            <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[10px] uppercase tracking-[0.2em] text-zinc-400 font-bold">
+              <a href="https://github.com/Subham-KRLX/Porsche-premium-car-experience" target="_blank" rel="noopener noreferrer" aria-label="Source code (opens in a new tab)" className="hover:text-white transition-colors">Source Code</a>
+              <a href="https://subham-sangwan-portfolio-kappa.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Developer portfolio (opens in a new tab)" className="hover:text-white transition-colors">Developer</a>
+              <a href="https://www.porsche.com/" target="_blank" rel="noopener noreferrer" aria-label="Official Porsche website (opens in a new tab)" className="hover:text-white transition-colors">Official Porsche</a>
             </div>
-            <p className="text-zinc-600 text-[10px] uppercase tracking-[0.2em] font-bold">© 2024 Porsche Inspired Experience. All rights reserved.</p>
+            <p className="text-zinc-400 text-xs leading-relaxed text-center md:text-right max-w-sm">Independent portfolio project by Subham Sangwan. Not affiliated with Porsche AG.</p>
           </div>
         </div>
       </footer>
